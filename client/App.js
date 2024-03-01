@@ -8,11 +8,16 @@ import Cart from "./screens/Cart";
 import Checkout from "./screens/Checkout";
 import Payments from "./screens/Payments";
 import Register from "./screens/auth/Register";
+import Account from "./screens/Account/Account";
+import MyOrders from "./screens/Account/MyOrders";
+import Notifications from "./screens/Account/Notifications";
+import Profile from "./screens/Account/Profile";
+import Dashboard from "./screens/Admin/Dashboard";
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="register">
+      <Stack.Navigator initialRouteName="account">
         <Stack.Screen
           name="Home"
           component={Home}
@@ -27,6 +32,11 @@ export default function App() {
         <Stack.Screen name="About" component={About} />
         <Stack.Screen name="login" component={Login} />
         <Stack.Screen name="register" component={Register} />
+        <Stack.Screen name="account" component={Account} />
+        <Stack.Screen name="myorders" component={MyOrders} />
+        <Stack.Screen name="notifications" component={Notifications} />
+        <Stack.Screen name="profile" component={Profile} />
+        <Stack.Screen name="adminPanel" component={Dashboard} />
       </Stack.Navigator>
     </NavigationContainer>
   );
